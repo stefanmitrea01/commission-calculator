@@ -26,7 +26,7 @@ A PHP-based commission calculator that processes transactions and calculates com
 
    Copy content from `exemple.env` file:
 
-   Create `.env` file and paste content from exemple.env and configure the following:
+   Create `.env` file and paste content from exemple.env
 
 ## Usage
 
