@@ -61,20 +61,20 @@ class CommissionService
     public function calculateCommission(TransactionModel $transaction): float
     {
         // Check if the BIN corresponds to an EU country
-        $isEu = $this->binService->isEu($transaction->getBin());
+        $isEu = $this->binService->isEu($transaction->bin);
 
         // Get exchange rate for the given currency to BASE_CURRENCY_TO_CONVERT
         $rate = $this->currencyService->getExchangeRate(
-            $transaction->getCurrency(),
+            $transaction->currency,
             ApiConstant::BASE_CURRENCY_TO_CONVERT
         );
 
         // Convert transaction amount to BASE_CURRENCY_TO_CONVERT
-        $amountInEur = $transaction->getAmount() / $rate;
+        $amountInEur = $transaction->amount / $rate;
 
         // If already in EUR or exchange rate is unavailable, keep the amount as is
-        if ($transaction->getCurrency() === 'EUR' || !$rate) {
-            $amountInEur = $transaction->getAmount();
+        if ($transaction->currency === 'EUR' || !$rate) {
+            $amountInEur = $transaction->amount;
         }
 
         // Apply different commission rates based on EU status
