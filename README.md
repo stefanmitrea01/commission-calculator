@@ -24,13 +24,9 @@ A PHP-based commission calculator that processes transactions and calculates com
 
 3. Set up environment variables:
 
-   Copy the example `.env` file:
+   Copy content from `exemple.env` file:
 
-    ```bash
-    cp .env.example .env
-    ```
-
-   Open `.env` and configure the following:
+   Create `.env` file and paste content from exemple.env and configure the following:
 
     ```
     BIN_LOOKUP_URL=https://lookup.binlist.net/
