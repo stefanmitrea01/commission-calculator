@@ -28,12 +28,6 @@ A PHP-based commission calculator that processes transactions and calculates com
 
    Create `.env` file and paste content from exemple.env and configure the following:
 
-    ```
-    BIN_LOOKUP_URL=https://lookup.binlist.net/
-    EXCHANGE_RATE_URL=https://api.apilayer.com/exchangerates_data/latest
-    API_KEY=your_api_key_here
-    ```
-
 ## Usage
 
 Run the application with:
